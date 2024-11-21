@@ -62,7 +62,7 @@ const AuthForm = () => {
   };
 
   return (
-    <div className="border rounded-lg p-7 mt-5 max-w-[550px] mx-3 shadow-xl w-full">
+    <div className="border border-blue-600 rounded-lg p-7 mt-5 max-w-[550px] mx-3 shadow-xl w-full">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
@@ -70,11 +70,12 @@ const AuthForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-white">Email</FormLabel>
                 <FormControl>
                   <Input
                     disabled={isLoading}
                     placeholder="Enter Your Email"
+                    className="bg-gray-800 border-none text-white"
                     {...field}
                   />
                 </FormControl>
@@ -87,12 +88,13 @@ const AuthForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel className="text-white">Password</FormLabel>
                 <FormControl>
                   <Input
                     disabled={isLoading}
                     type="password"
                     placeholder="Enter Your Password"
+                    className="bg-gray-800 border-none text-white"
                     {...field}
                   />
                 </FormControl>
@@ -100,13 +102,17 @@ const AuthForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" disabled={isLoading} className="w-full">
+          <Button
+            type="submit"
+            disabled={isLoading}
+            className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-80 transition"
+          >
             Sign In
           </Button>
         </form>
       </Form>
       <div className="mt-4">
-        <p className="text-center">
+        <p className="text-center text-white">
           New Here?{" "}
           <Link href={"/sign-up"} className="font-medium underline">
             Create An Account

@@ -121,7 +121,7 @@ const AuthForm = () => {
   };
 
   return (
-    <div className="border rounded-lg p-7 mt-5 max-w-[550px] mx-3 shadow-xl w-full">
+    <div className="border border-blue-600 rounded-lg p-7 mt-5 max-w-[550px] mx-3 shadow-xl w-full">
       {step === "signup" ? (
         <>
           <Form {...signupForm}>
@@ -134,11 +134,12 @@ const AuthForm = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel className="text-white">Name</FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
                         placeholder="Enter Your Name"
+                        className="bg-gray-800 border-none text-white"
                         {...field}
                       />
                     </FormControl>
@@ -151,11 +152,12 @@ const AuthForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="text-white">Email</FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
                         placeholder="Enter Your Email"
+                        className="bg-gray-800 border-none text-white"
                         {...field}
                       />
                     </FormControl>
@@ -168,12 +170,13 @@ const AuthForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel className="text-white">Password</FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
                         type="password"
                         placeholder="Enter Your Password"
+                        className="bg-gray-800 border-none text-white"
                         {...field}
                       />
                     </FormControl>
@@ -181,13 +184,17 @@ const AuthForm = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" disabled={isLoading} className="w-full">
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-80 transition"
+              >
                 Sign Up
               </Button>
             </form>
           </Form>
           <div className="mt-4">
-            <p className="text-center">
+            <p className="text-center text-white">
               Already Have An Account?{" "}
               <Link href={"/sign-in"} className="font-medium underline">
                 Login Here
@@ -206,7 +213,7 @@ const AuthForm = () => {
               name="otp"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>OTP</FormLabel>
+                  <FormLabel className="text-white">OTP</FormLabel>
                   <FormControl>
                     <Input
                       disabled={isLoading}
