@@ -9,6 +9,8 @@
 # testing
 /coverage
 
+/app/api/flask/venv
+
 # next.js
 /.next/
 /out/
