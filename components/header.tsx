@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 backdrop-blur-md bg-gray-950/20 text-white pt-5 pb-4 fixed inset-x-0 top-0">
+    <header className="z-50 backdrop-blur-md bg-[#111827]/20 text-white pt-5 pb-4 fixed inset-x-0 top-0">
       <div className="max-w-screen-2xl mx-auto flex justify-between items-center px-4 lg:px-14">
         <Link href="/" className="flex items-center">
           <span className="text-2xl font-bold ml-3 from-blue-500 to-blue-700 text-clip">
@@ -48,7 +48,7 @@ export default function Header() {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="bg-black text-white p-4 lg:hidden">
+        <div className="bg-gradient-to-b from-[#111827] to-[#0b0f19] text-white p-4 h-screen lg:hidden">
           <Link href="/features" className="block py-2 hover:text-blue-400">
             Features
           </Link>

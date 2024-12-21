@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       className={cn(
-        "py-4 bg-[#25272D] min-h-screen w-full pt-28 px-4 lg:px-6 text-gray-200",
+        "py-4 bg-[#0b0f19] min-h-screen w-full pt-28 px-4 lg:px-6 text-gray-200",
         font.className
       )}
     >

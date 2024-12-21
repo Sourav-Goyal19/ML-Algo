@@ -46,10 +46,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-[#2E3137] fixed top-6 inset-x-6 px-4 py-4 rounded-lg lg:rounded-full shadow-lg z-50">
+    <div className="bg-[#111827] fixed top-6 inset-x-6 px-4 py-4 rounded-lg lg:rounded-full shadow-lg z-50">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="bg-[#B1EE81] rounded-full p-2">
+          <Link href="/" className="bg-blue-500 rounded-full p-2">
             <Image src="/code.svg" alt="logo" height={25} width={25} />
           </Link>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "flex items-center gap-2 bg-[#34373E] px-4 py-3 rounded-full text-gray-300 hover:bg-slate-200 hover:text-black text-sm font-medium transition duration-200",
+                  "flex items-center gap-2 bg-[#111827] px-4 py-3 rounded-full text-gray-300 hover:bg-slate-200 hover:text-black text-sm font-medium transition duration-200",
                   pathname === link.href && "bg-slate-100 text-black"
                 )}
               >
@@ -78,7 +78,7 @@ const Navbar = () => {
             width={200}
             className="rounded-full object-cover h-10 w-10"
           />
-          <Button className="hidden lg:block bg-[#B1EE81] text-gray-900 px-12 py-2 rounded-full font-semibold text-base hover:bg-[#B1EE81] hover:opacity-80">
+          <Button className="hidden lg:block bg-blue-500 text-gray-900 px-12 py-2 rounded-full font-semibold text-base hover:bg-blue-600 hover:opacity-80">
             {data?.user?.name || "Premium Upgrade"}
           </Button>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="w-full bg-[#B1EE81] text-gray-900 py-2 rounded-full font-semibold text-sm hover:bg-[#B1EE81] hover:opacity-80">
+          <Button className="w-full bg-[#B1EE81] py-2 rounded-full font-semibold text-sm hover:bg-[#B1EE81] hover:opacity-80 text-white">
             {data?.user?.name || "Premium Upgrade"}
           </Button>
         </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SignUpPage = () => {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-gray-900 min-h-screen flex flex-col w-full items-center justify-center">
+    <div className="bg-gradient-to-b from-[#111827] to-[#0b0f19] min-h-screen flex flex-col w-full items-center justify-center">
       <h1 className="text-3xl font-bold text-center text-white">
         Create Your Account
       </h1>

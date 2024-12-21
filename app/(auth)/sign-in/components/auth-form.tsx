@@ -12,12 +12,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 
 const AuthForm = () => {
   const router = useRouter();
@@ -75,7 +75,7 @@ const AuthForm = () => {
                   <Input
                     disabled={isLoading}
                     placeholder="Enter Your Email"
-                    className="bg-gray-800 border-none text-white"
+                    className="bg-[#0b0f19] border-[#374151] border-2 text-white"
                     {...field}
                   />
                 </FormControl>
@@ -94,7 +94,7 @@ const AuthForm = () => {
                     disabled={isLoading}
                     type="password"
                     placeholder="Enter Your Password"
-                    className="bg-gray-800 border-none text-white"
+                    className="bg-[#0b0f19] border-[#374151] border-2 text-white"
                     {...field}
                   />
                 </FormControl>
@@ -105,7 +105,7 @@ const AuthForm = () => {
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-80 transition"
+            className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-80 transition text-white"
           >
             Sign In
           </Button>
