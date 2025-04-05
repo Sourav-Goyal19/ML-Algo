@@ -13,7 +13,7 @@ app.onError((err, ctx) => {
   return ctx.json({ error: err.message }, 500);
 });
 
-const routes = app.get("/", (c) => {
+export const routes = app.get("/", (c) => {
   return c.json({ message: "Hello Hono!" });
 });
 

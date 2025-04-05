@@ -39,9 +39,11 @@ export default function Header() {
           >
             Sign Up
           </Link>
-          <Button className="bg-gradient-to-r from-blue-500 to-blue-700 text-gray-200 hover:opacity-80 transition-colors duration-300">
-            Get Started
-          </Button>
+          <Link href="/sign-in">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-700 text-gray-200 hover:opacity-80 transition-colors duration-300">
+              Get Started
+            </Button>
+          </Link>
         </nav>
         <button onClick={toggleMenu} className="lg:hidden text-white">
           <Menu size={24} />

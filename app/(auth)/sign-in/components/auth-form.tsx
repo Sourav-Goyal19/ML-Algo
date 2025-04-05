@@ -52,7 +52,7 @@ const AuthForm = () => {
         toast.error("Invalid Credentials");
       } else {
         toast.success("Login Successfully");
-        router.push("/");
+        router.push("/dashboard");
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);

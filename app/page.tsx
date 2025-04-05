@@ -4,6 +4,7 @@ import { Cpu, Zap, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 export default function LandingPage() {
   const features = [
@@ -117,12 +118,16 @@ export default function LandingPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-8 flex flex-col sm:flex-row gap-4"
           >
-            <Button className="text-[18px] py-6 px-5 transition bg-gradient-to-r from-blue-500 to-blue-800 hover:opacity-80 text-white font-light">
-              Get Started for Free
-            </Button>
-            <Button className="text-[18px] py-6 px-5 transition bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 text-white font-light">
-              Login to Explore
-            </Button>
+            <Link href="/sign-in">
+              <Button className="text-[18px] py-6 px-5 transition bg-gradient-to-r from-blue-500 to-blue-800 hover:opacity-80 text-white font-light">
+                Get Started for Free
+              </Button>
+            </Link>
+            <Link href="/sign-in">
+              <Button className="text-[18px] py-6 px-5 transition bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 text-white font-light">
+                Login to Explore
+              </Button>
+            </Link>
           </motion.div>
         </section>
 
